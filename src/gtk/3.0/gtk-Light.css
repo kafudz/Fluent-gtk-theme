@@ -6215,9 +6215,9 @@ button.flat.tilix-small-button {
   border-style: none;
 }
 
-/*************
- * Ubitquity *
- *************/
+/************
+ * Ubiquity *
+ ************/
 #live_installer .menubar progressbar trough {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.12);
@@ -6286,12 +6286,9 @@ window.background.chromium treeview.view button {
   border: 1px solid rgba(0, 0, 0, 0.26);
 }
 
-window.background.chromium entry.chromium {
-  background-color: rgba(0, 0, 0, 0.04);
-}
-
 window.background.chromium entry.chromium, window.background.chromium entry.chromium:focus {
   color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 window.background.chromium > textview.view, window.background.chromium textview {
@@ -6379,10 +6376,6 @@ tooltip.background.chromium {
   color: rgba(117, 117, 117, 0.5);
 }
 
-#MozillaGtkWidget menu {
-  border: none;
-}
-
 #MozillaGtkWidget > widget > menubar {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -6397,6 +6390,10 @@ tooltip.background.chromium {
 
 #MozillaGtkWidget > widget > frame {
   color: rgba(0, 0, 0, 0.26);
+}
+
+#MozillaGtkWidget menu {
+  border: none;
 }
 
 #MozillaGtkWidget menu > separator {
@@ -6593,7 +6590,7 @@ window.background:not(.solid-csd):not(.csd) > notebook:not(.frame) > stack {
 /******************
  * SoundConverter *
  ******************/
-frame > widget > box.vertical > notebook > stack {
+window.background frame > widget > box.vertical > notebook > stack {
   background-color: #F2F2F2;
 }
 
@@ -6681,6 +6678,10 @@ window.background > box.vertical:nth-child(2) > box.vertical.primary-toolbar:nth
 window.background > box.vertical > paned.horizontal:nth-child(1) > box.horizontal:nth-child(3) > box.vertical:nth-child(1) > notebook.frame:nth-child(4) > stack:nth-child(2) > box.vertical > toolbar.horizontal:nth-child(1) {
   background-color: #F2F2F2;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+window.background > box.vertical > paned.horizontal:nth-child(1) > box.horizontal:nth-child(3) > box.vertical:nth-child(1) > notebook.frame:nth-child(4) > stack:nth-child(2) > box.vertical > toolbar.horizontal:nth-child(1):backdrop {
+  background-color: #F2F2F2;
 }
 
 /*****************************************************

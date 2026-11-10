@@ -4730,6 +4730,21 @@ StWidget.focused .app-grid-running-dot {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:hover, .dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:focus {
+  background-color: rgba(238, 238, 236, 0.1) !important;
+}
+
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:active, .dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:checked {
+  background-color: rgba(238, 238, 236, 0.18) !important;
+}
+
 .openweather-button, .openweather-button-action, .openweather-menu-button-container, .openweather-button-box {
   border: 1px solid transparent !important;
 }

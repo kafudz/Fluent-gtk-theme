@@ -40,7 +40,7 @@ Run the following commands in the terminal:
 
 -n, --name NAME         Specify theme name (Default: Fluent)
 
--t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|teal|all] (Default: blue)
+-t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|teal|all] (Default: default)
 
 -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)
 
@@ -52,6 +52,7 @@ Run the following commands in the terminal:
 
 -l, --libadwaita        Install link to gtk4 config for theming libadwaita
 
+-r, --remove
 -u, --uninstall         Uninstall themes or link for libadwaita
 
 --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder|square]
@@ -92,7 +93,7 @@ Automatically install your host GTK+ theme as a Flatpak.
 Just install the compact version
 
 ```sh
-./install.sh --tweaks compact
+./install.sh --size compact
 ```
 
 ## Gtk theme widgets

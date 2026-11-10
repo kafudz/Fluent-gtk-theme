@@ -1835,6 +1835,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: #FF6D00;
 }
 
+.prompt-dialog-info-label {
+  color: #1A73E8;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 /* Polkit Dialog */
 .polkit-dialog-user-layout {
   text-align: center;
@@ -4797,6 +4802,21 @@ StWidget.focused .app-grid-running-dot {
 
 .dashtopanelMainPanel .panel-button {
   color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:hover, .dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:focus {
+  background-color: rgba(238, 238, 236, 0.1) !important;
+}
+
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:active, .dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:checked {
+  background-color: rgba(238, 238, 236, 0.18) !important;
 }
 
 .openweather-button, .openweather-button-action, .openweather-menu-button-container, .openweather-button-box {

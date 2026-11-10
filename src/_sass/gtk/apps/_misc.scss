@@ -42,9 +42,9 @@ button.flat.tilix-small-button {
 }
 
 
-/*************
- * Ubitquity *
- *************/
+/************
+ * Ubiquity *
+ ************/
 #live_installer .menubar progressbar trough {
   border-radius: 4px; // Adjust to hard-coded progress border-radius
   background-color: $titlebar-track-disabled;
@@ -114,11 +114,10 @@ window.background.chromium {
   }
 
   entry.chromium {
-    &, &:focus { // overrides standard borders
+    &, &:focus {
       color: $text;
+      background-color: $fill;
     }
-
-    background-color: $fill;
   }
 
   // internal region of toolbar's entry widget
@@ -156,9 +155,6 @@ tooltip.background.chromium { background-color: rgba($tooltip, 1); }
 
     // For separators in bookmark toolbar
     > separator { color: $divider; }
-
-    // avoid black border
-    // > scrollbar { background-clip: border-box; }
 
     // Emphasize toolbar's border-bottom
     > frame > border { border-color: $solid-border; }
@@ -213,15 +209,8 @@ tooltip.background.chromium { background-color: rgba($tooltip, 1); }
 
       &:disabled { color: rgba($grey-600, 0.5); }
     }
-  }
 
-  // remove ugly border around the menus
-  menu { border: none; }
-}
-
-// for backward compatibility
-#MozillaGtkWidget {
-  > widget {
+    // for backward compatibility
     > menubar {
       color: $titlebar-text-secondary;
 
@@ -233,6 +222,10 @@ tooltip.background.chromium { background-color: rgba($tooltip, 1); }
     > frame { color: $track; }
   }
 
+  // remove ugly border around the menus
+  menu { border: none; }
+
+  // for backward compatibility
   menu > separator { color: $divider; }
 }
 
@@ -461,8 +454,8 @@ window.background:not(.solid-csd):not(.csd) {
 /******************
  * SoundConverter *
  ******************/
-//dialog.background > box.dialog-vbox.vertical > box.vertical > frame > widget > box.vertical > notebook > stack
-frame > widget > box.vertical > notebook > stack {
+// Scoped to windows to avoid matching unrelated widgets.
+window.background frame > widget > box.vertical > notebook > stack {
   // make stack color match background one in settings dialog window
   background-color: $background;
 }
@@ -578,6 +571,8 @@ window.background > box.vertical > paned.horizontal:nth-child(1) > box.horizonta
   // toolbar background and bottom border in "Rules/Profiles" table
   background-color: $titlebar-backdrop;
   border-bottom: 1px solid $border;
+
+  &:backdrop { background-color: $titlebar-backdrop; }
 }
 
 
