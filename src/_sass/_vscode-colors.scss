@@ -1,0 +1,17 @@
+// VS Code Dark Modern palette overrides
+// Window/content surfaces
+$background:                            if($variant == 'light', #F2F2F2, #181818);
+$surface:                               if($variant == 'light', #FFFFFF, #252526);
+$base:                                  if($variant == 'light', #FFFFFF, #1F1F1F); // semi-surface with 1dp elevation
+$base-alt:                              if($variant == 'light', #FAFAFA, #181818);
+
+@function titlebar($state: 'normal') {
+  @if ($variant == 'light' and $topbar == 'light' and $state=='normal' and $blur == 'false') { @return #F7F7F7; }
+  @if ($variant == 'light' and $topbar == 'light' and $state=='backdrop' and $blur == 'false') { @return #F2F2F2; }
+  @if ($variant == 'light' and $topbar == 'light' and $state=='normal' and $blur == 'true') { @return #FFFFFF; }
+  @if ($variant == 'light' and $topbar == 'light' and $state=='backdrop' and $blur == 'true') { @return #FCFCFC; }
+  @if ($variant == 'light' and $topbar == 'dark' and $state=='normal') { @return #181818; }
+  @if ($variant == 'light' and $topbar == 'dark' and $state=='backdrop') { @return #1F1F1F; }
+  @if ($variant == 'dark' and $state=='normal') { @return #181818; }
+  @if ($variant == 'dark' and $state=='backdrop') { @return #1F1F1F; }
+}
